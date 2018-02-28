@@ -47,6 +47,11 @@ $(document).ready(function() {
 
             console.log("Account data", accountData);
 
+            // if loading spinner is active, turn it off
+            if($('.loader-wrapper').length > 0) {
+              hideLoader();
+            }
+
             // Update address in case it's not defined yet
             if (!address && accountData.addresses[0]) {
 
@@ -111,6 +116,9 @@ $(document).ready(function() {
     //
     $("#seedSubmit").on("click", function() {
 
+        // show loading spinner
+        showLoader();
+
         // We modify the entered seed to fit the criteria of 81 chars, all uppercase and only latin letters
         setSeed($("#userSeed").val());
 
@@ -146,4 +154,12 @@ $(document).ready(function() {
             }
         })
     })
+
+    function showLoader() {
+      $('body').append('<div class="loader-wrapper"><div class="loader"></div></div>')
+    }
+
+    function hideLoader() {
+      $('.loader-wrapper').remove();
+    }
 });

@@ -1,12 +1,10 @@
 $(document).ready(function() {
 
-    //
-    //  Instantiate IOTA
-    //
-    var iota = new IOTA({
-        'host': 'http://localhost',
-        'port': 14265
-    });
+    // IOTA node and powbox are separate servers
+    const provider = 'https://nodes.testnet.iota.org:443'
+
+    // Create an IOTA object as usual
+    const iota = new IOTA({ provider })
 
     var seed;
     var balance = 0;

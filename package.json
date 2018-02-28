@@ -1,0 +1,22 @@
+{
+  "name": "leaderboard-example",
+  "version": "1.0.0",
+  "description": "IOTA Proof of Concept Application example with tutorial. Please head to the IOTA Learn Tutorial for more information.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/huhn511/leaderboard-example.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/huhn511/leaderboard-example/issues"
+  },
+  "homepage": "https://github.com/huhn511/leaderboard-example#readme",
+  "dependencies": {
+    "iota.lib.js": "^0.4.7"
+  }
+}
